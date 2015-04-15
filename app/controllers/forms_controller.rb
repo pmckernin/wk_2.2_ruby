@@ -12,7 +12,7 @@ class FormsController < ApplicationController
     # Processing a form
     #=====================================
 
-    @result = params["your_name"]
+    @feeling = params["your_name"]
     render "num_1_process"
   end
 
@@ -56,6 +56,12 @@ class FormsController < ApplicationController
     render "num_4_display"
   end
 
+def num_4_process
+@feeling = params["your_feeling"]
+render "num_4_process"
+end
+
+
   def num_5_display
     #=== Problem ===========================
     # Translating to snake case
@@ -69,6 +75,14 @@ class FormsController < ApplicationController
 
     render "num_5_display"
   end
+
+def num_5_process
+@phrase = params["phrase"].gsub(/ /, '_').downcase
+render "num_5_process"
+end
+
+
+
 
   def num_6_display
     #=== Problem ===========================
