@@ -127,6 +127,13 @@ end
     render "num_7_display"
   end
 
+  def num_7_radius
+
+    @rad = params["radius"].to_i
+    @cir = @rad * 2 * 3.1416
+    render "num_7_process"
+end
+
   def num_8_display
     #=== Problem ===========================
     # Simulated sign-in
@@ -139,6 +146,19 @@ end
 
     render "num_8_display"
   end
+
+  def num_8_login
+@user_name=params["User_name"]
+@password = params["password"]
+
+if @password = "ha"
+    render "num_8_process"
+else
+    render "num_8_wrong"
+end
+
+end
+
 
   def num_9_display
     #=== Problem ===========================
@@ -154,6 +174,18 @@ end
 
     render "num_9_display"
   end
+
+def num_9_madlib
+@noun_1 = params["noun_1"]
+@noun_2 = params["noun_2"]
+@adjective_1 = params["adjective_1"]
+@verb_1 = params["verb_1"]
+@noun_3 = params["noun_3"]
+
+
+render "num_9_process"
+end
+
 
   def num_10_display
     #=== Problem ===========================

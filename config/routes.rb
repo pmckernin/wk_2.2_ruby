@@ -39,8 +39,16 @@ Rails.application.routes.draw do
 
 
   get("/forms/7", {:controller => "forms", :action => "num_7_display"})
+  get("/forms/7_process", {:controller => "forms", :action => "num_7_radius"})
+
+
   get("/forms/8", {:controller => "forms", :action => "num_8_display"})
+  get("/forms/8_process", {:controller => "forms", :action => "num_8_login"})
+
+
   get("/forms/9", {:controller => "forms", :action => "num_9_display"})
+  get("/forms/9_process", {:controller => "forms", :action => "num_9_madlib"})
+
   get("/forms/10", {:controller => "forms", :action => "num_10_display"})
 
   # The priority is based upon order of creation: first created -> highest priority.
