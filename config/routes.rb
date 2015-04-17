@@ -35,6 +35,9 @@ Rails.application.routes.draw do
     get("/forms/5_process", {:controller => "forms", :action => "num_5_process"})
 
   get("/forms/6", {:controller => "forms", :action => "num_6_display"})
+  get("/forms/6_process", {:controller => "forms", :action => "num_6_process"})
+
+
   get("/forms/7", {:controller => "forms", :action => "num_7_display"})
   get("/forms/8", {:controller => "forms", :action => "num_8_display"})
   get("/forms/9", {:controller => "forms", :action => "num_9_display"})

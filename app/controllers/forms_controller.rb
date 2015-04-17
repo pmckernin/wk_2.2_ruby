@@ -12,7 +12,7 @@ class FormsController < ApplicationController
     # Processing a form
     #=====================================
 
-    @feeling = params["your_name"]
+    @result = params["your_name"]
     render "num_1_process"
   end
 
@@ -100,6 +100,17 @@ end
 
     render "num_6_display"
   end
+
+  def num_6_process
+    @length = params["length"].to_i
+@width = params["width"].to_i
+@height = params["height"].to_i
+
+@volume=@length*@width*@height
+    render "num_6_process"
+
+end
+
 
   def num_7_display
     #=== Problem ===========================
